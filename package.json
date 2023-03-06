@@ -1,0 +1,22 @@
+{
+  "name": "actions-testing",
+  "version": "1.0.0",
+  "description": "testing github actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsfoster87/actions-testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nsfoster87/actions-testing/issues"
+  },
+  "homepage": "https://github.com/nsfoster87/actions-testing#readme",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
