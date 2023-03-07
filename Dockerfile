@@ -1,8 +1,11 @@
-# Container image that runs the code
-FROM alpine:3.10
+# syntax=docker/dockerfile:1
+FROM busybox:latest
+COPY --chmod=755 <<EOF /app/run.sh
+#!/bin/sh
+while true; do
+  echo -ne "The time is now $(date +%T)\\r"
+  sleep 1
+done
+EOF
 
-# Copies code file from action repository to the filesystem path '/' of the container
-COPY entrypoint.sh /entrypoint.sh
-
-# Code file to execute when the docker container starts up
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT /app/run.sh
